@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 int main () {
-	int n,i,s,a;
+	int n,s,a;
 	scanf("%d%d",&n,&s);
-	for (i=1;i<=s;i++) {if ((i*n)>=s) {break;}};
+	int i=(s+n-1)/n;
 	printf("%d",i);
 	return 0;
 }

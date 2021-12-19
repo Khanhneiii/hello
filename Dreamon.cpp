@@ -4,8 +4,12 @@ int main ()
 {
 	int m,n,a,b,c,d;c=0;
 	scanf ("%d%d",&n,&m);
-	for (a=0;a<=n;a++) {b=(n-a)/2; {if ((a+b)%m ==0 && (2*b+a)==n) {printf ("%d",a+b);c++;break;} };};
-	if (c==0) {printf("-1");};
+	int min;
+	if (n%2==0) min = n/2;
+	else min = n/2+1;
+	b = (min + m -1)/m * m;
+	if (b>n) printf ("-1");
+	else printf ("%d ",b);
 	return 0;
 }
 	
